@@ -13,7 +13,7 @@ KDIR := /lib/modules/$(UNAME)/build
 STD_CFLAGS  := $(shell $(XENO_CONFIG) --skin=$(XENOMAI_SKIN) --skin=rtdm --cflags) -I. -g -DXENOMAI_SKIN_$(XENOMAI_SKIN)
 STD_LDFLAGS := $(shell $(XENO_CONFIG) --skin=$(XENOMAI_SKIN) --skin=rtdm --ldflags) -g 
 EXTRA_CFLAGS += $(shell $(XENO_CONFIG) --skin=$(XENOMAI_SKIN) --skin=rtdm --cflags)
-EXTRA_CFLAGS += $(CFLAGS) 
+EXTRA_CFLAGS += $(CFLAGS)
 
 MODULE_NAME=rtdm_pruss_irq
 TEST=$(MODULE_NAME)-test
